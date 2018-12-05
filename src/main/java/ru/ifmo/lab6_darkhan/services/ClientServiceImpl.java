@@ -2,8 +2,12 @@ package ru.ifmo.lab6_darkhan.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ru.ifmo.lab6_darkhan.entities.ClientEntity;
 import ru.ifmo.lab6_darkhan.repositories.ClientRepository;
 import ru.ifmo.lab6_darkhan.services.interfaces.ClientService;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class ClientServiceImpl implements ClientService {
@@ -16,33 +20,12 @@ public class ClientServiceImpl implements ClientService {
 	}
 
 	@Override
-	public String getClientsNumbers() {
-
-		StringBuilder result = new StringBuilder();
-
-		repository.findAll().forEach(s -> {
-			result.append(s.getClientNumber());
-			result.append(" ");
-		});
-
-		return result.toString();
+	public List<String> getClientsCompanyNames() {
+		return new ArrayList<>(repository.selectCompanyNames());
 	}
 
 	@Override
-	public String getClientsCompanyNames() {
-		StringBuilder result = new StringBuilder();
-
-		/*repository.findAll().forEach(s -> {
-			result.append(s.getCompanyName());
-			result.append(" ");
-		});*/
-
-		repository.selectCompanyNames().forEach(s -> {
-			result.append(s);
-			result.append(" ");
-		});
-
-		return result.toString();
-
+	public ClientEntity getClientByCompanyName(String name) {
+		return repository.findByCompanyName(name);
 	}
 }

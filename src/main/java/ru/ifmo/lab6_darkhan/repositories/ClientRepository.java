@@ -11,4 +11,7 @@ import java.util.List;
 public interface ClientRepository extends CrudRepository<ClientEntity, Long> {
 	@Query("select companyName from ClientEntity")
 	public List<String> selectCompanyNames();
+
+	public ClientEntity findByCompanyName(String name);
+
 }
