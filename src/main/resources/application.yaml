@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:sqlserver://localhost:1433;databaseName=Darkhan
+    url: jdbc:sqlserver://localhost:1433;databaseName=Darkhan;CharacterSet=cp1251
     username: sa
     password: myPassw0rd
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver

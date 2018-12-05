@@ -29,11 +29,16 @@ public class ClientServiceImpl implements ClientService {
 	}
 
 	@Override
-	public String getClientsOrganizationNames() {
+	public String getClientsCompanyNames() {
 		StringBuilder result = new StringBuilder();
 
-		repository.findAll().forEach(s -> {
+		/*repository.findAll().forEach(s -> {
 			result.append(s.getCompanyName());
+			result.append(" ");
+		});*/
+
+		repository.selectCompanyNames().forEach(s -> {
+			result.append(s);
 			result.append(" ");
 		});
 

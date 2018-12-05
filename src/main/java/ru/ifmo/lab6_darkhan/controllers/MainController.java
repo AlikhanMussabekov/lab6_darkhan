@@ -2,11 +2,11 @@ package ru.ifmo.lab6_darkhan.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import ru.ifmo.lab6_darkhan.services.interfaces.ClientService;
 
 @Controller
+@CrossOrigin(origins = "http://localhost:8080")
 public class MainController {
 
 	final ClientService clientService;
@@ -16,15 +16,20 @@ public class MainController {
 		this.clientService = clientService;
 	}
 
+	@RequestMapping("/")
+	public String getIndex(){
+		return "index.html";
+	}
+
 	@GetMapping("/clients")
 	@ResponseBody
 	public String getClients(){
 		return clientService.getClientsNumbers();
 	}
 
-	@GetMapping("/organizationnames")
+	@GetMapping("/companynames")
 	@ResponseBody
 	public String getClientsOrganizationNames(){
-		return clientService.getClientsOrganizationNames();
+		return clientService.getClientsCompanyNames();
 	}
 }
