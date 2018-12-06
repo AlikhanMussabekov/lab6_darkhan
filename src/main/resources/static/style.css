@@ -1,4 +1,20 @@
+body{
+    background-color: #f8f8f8;
+}
+
 .chart-container{
-    width: 700px;
-    height: 500px;
+    width: 95%;
+    height: 450px;
+    margin: 0 auto;
+}
+.full{
+    width: 100%;
+}
+.half{
+    width: 50%;
+}
+
+canvas{
+    align-self: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }

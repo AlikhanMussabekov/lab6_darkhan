@@ -9,23 +9,43 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div>
-	<div class="chart-container">
-		<canvas id="chart"></canvas>
-	</div>
-
-	<div class="clients">2</div>
-
-	<table id="client-table" class="client-table">
-		<tr>
-			<td>Название</td>
-		</tr>
-	</table>
 
 	<div>
-		<input type="text" name="name">
-		<button onclick="getInvoice()">Submit</button>
+		<table class="full">
+			<tr class="full">
+				<td class="half">
+					<div class="chart-container">
+						<canvas id="invoiceChart"></canvas>
+					</div>
+				</td>
+				<td class="half">
+					<div class="chart-container">
+						<canvas id="employeeChart"></canvas>
+					</div>
+				</td>
+			</tr>
+		</table>
 	</div>
-</div>
+
+	<div>
+		<table>
+			<tr>
+				<td>
+					<table id="clients-table" class="clients-table">
+						<tr>
+							<td class="title">Название</td>
+						</tr>
+					</table>
+				</td>
+				<td>
+					<table id="employees-table" class="employees-table">
+						<tr>
+							<td class="title">Название</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
 </body>
 </html>
