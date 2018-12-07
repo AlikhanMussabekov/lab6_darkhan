@@ -1,5 +1,9 @@
 body{
-    background-color: #f8f8f8;
+    /*background-color: #f8f8f8;*/
+    background-image: url("media/background-shapes.svg");
+    background-position: center;
+    background-size: 3000px;
+    background-repeat: no-repeat;
 }
 
 .chart-container{
@@ -16,5 +20,42 @@ body{
 
 canvas{
     align-self: center;
+    border-radius: 10px;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.info-table{
+    width: 400px;
+    margin : 0 auto;
+    font-family: "Open Sans", sans-serif;
+    vertical-align: middle;
+    color: white;
+    background-color: rgba(255, 99, 132,0.9);
+    border: 0px solid rgb(255, 99, 132);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.title{
+    /*background-color: rgb(242,63,99);*/
+    color : #415659;
+}
+
+td{
+    text-align: center;
+}
+
+.client-td:hover{
+    background-color: rgb(0,190,223);
+}
+
+h1{
+    padding-top: 2em;
+    padding-left: 1em;
+    font-family: "Open Sans", sans-serif;
+    color: #415659;
+}
+
+.hrefs{
+    padding-left: 2em;
 }

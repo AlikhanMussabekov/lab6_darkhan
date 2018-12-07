@@ -6,9 +6,23 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 	<script src="script.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
+	<div>
+		<h1>Лабораторную работу выполнил Айдарханов Дархан</h1>
+
+		<div class="hrefs">
+			<a href="https://vk.com/darxan784">
+				<img src="media/vk.png" border="0" width="30" height="30">
+			</a>
+			<a href="http://instagram.com/darxan784">
+				<img src="media/instagram.png" border="0" width="30" height="30">
+			</a>
+		</div>
+	</div>
 
 	<div>
 		<table class="full">
@@ -18,31 +32,31 @@
 						<canvas id="invoiceChart"></canvas>
 					</div>
 				</td>
-				<td class="half">
-					<div class="chart-container">
-						<canvas id="employeeChart"></canvas>
-					</div>
+				<td>
+					<table id="clients-table" class="clients-table info-table">
+						<tr>
+							<td class="title">Название организации</td>
+						</tr>
+					</table>
 				</td>
 			</tr>
 		</table>
 	</div>
 
 	<div>
-		<table>
+		<table class="full">
 			<tr>
-				<td>
-					<table id="clients-table" class="clients-table">
+				<td class="half">
+					<table id="employees-table" class="employees-table info-table">
 						<tr>
-							<td class="title">Название</td>
+							<td class="title">Работник</td>
 						</tr>
 					</table>
 				</td>
-				<td>
-					<table id="employees-table" class="employees-table">
-						<tr>
-							<td class="title">Название</td>
-						</tr>
-					</table>
+				<td class="half">
+					<div class="chart-container">
+						<canvas id="employeeChart"></canvas>
+					</div>
 				</td>
 			</tr>
 		</table>

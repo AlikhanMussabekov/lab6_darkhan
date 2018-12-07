@@ -15,7 +15,7 @@ $(document).ready(function(){
 	invoiceChart = new Chart(invoiceChartContext, {
 
 		type: 'bar',
-
+		backgroundColor: "#FFFFFF",
 		data: {
 			labels: '',
 			datasets: [{
@@ -30,8 +30,7 @@ $(document).ready(function(){
 		// Configuration options go here
 		options: {
 			responsive : true,
-			maintainAspectRatio : false,
-			backgroundColor: 'rgba(255,255,255,1.0)'
+			maintainAspectRatio : false
 		}
 	});
 
@@ -40,7 +39,7 @@ $(document).ready(function(){
 	employeeChart = new Chart(employeeChartContext, {
 
 		type: 'line',
-
+		backgroundColor: "#FFFFFF",
 		data: {
 			labels: '',
 			datasets: [{
@@ -55,14 +54,13 @@ $(document).ready(function(){
 		// Configuration options go here
 		options: {
 			responsive : true,
-			maintainAspectRatio : false,
-			backgroundColor: 'rgba(255,255,255,1.0)'
+			maintainAspectRatio : false
 		}
 	});
 
 	$("#clients-table").on('click','tr',function() {
 
-		this.style.backgroundColor = "grey";
+		//this.style.backgroundColor = "grey";
 
 		var companyName = $(this).find("td").toArray()[0].innerText;
 
@@ -79,7 +77,7 @@ function fillCompanyNamesTable() {
 		var markup='';
 
 		data.forEach(function (item) {
-			markup += '<tr><td>' + item + '</td></tr>';
+			markup += '<tr><td class="client-td">' + item + '</td></tr>';
 		});
 
 		$(".clients-table tr").first().after(markup);
